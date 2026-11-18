@@ -106,15 +106,15 @@ ipython_config.py
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
 #   commonly ignored for libraries.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-# poetry.lock
-# poetry.toml
+poetry.lock
+poetry.toml
 
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
 #   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.
 #   https://pdm-project.org/en/latest/usage/project/#working-with-version-control
-# pdm.lock
-# pdm.toml
+pdm.lock
+pdm.toml
 .pdm-python
 .pdm-build/
 
@@ -153,11 +153,30 @@ activemq-data/
 .env
 .envrc
 .venv
+*.env
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+.env.*
+!.env.example
+
+# Sensitive Files
+.pem
+.pfx
+*.pem
+*.pfx
+
+# Cryptographic keys, certificates & SSH
+*.pem*
+*.key*
+*.crt
+*.p12
+*.pfx
+*.jks
+*id_rsa*
+*id_ed25519*
 
 # Spyder project settings
 .spyderproject
@@ -188,7 +207,7 @@ cython_debug/
 #   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
 #   and can be added to the global gitignore or merged into this file.  For a more nuclear
 #   option (not recommended) you can uncomment the following to ignore the entire idea folder.
-# .idea/
+.idea/
 
 # Abstra
 #   Abstra is an AI-powered process automation framework.
@@ -201,7 +220,7 @@ cython_debug/
 #   can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 #   and can be added to the global gitignore or merged into this file. However, if you prefer, you
 #   could uncomment the following to ignore the entire vscode folder
-# .vscode/
+.vscode/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
 
@@ -218,3 +237,14 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Editor & OS
+.DS_Store
+*.DS_Store*
+
+# AWS Stuff
+.aws-sam/
+kubeconfig
+*.kubeconfig
+*.kubeconfig*
+*.sarif
