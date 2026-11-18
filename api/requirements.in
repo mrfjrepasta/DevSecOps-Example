@@ -1,0 +1,5 @@
+# API
+fastapi==0.163.2
+
+# Web Service
+uvicorn==0.54.0
