@@ -1,2 +1,7 @@
 -c requirements.txt
 pip-tools==7.7.0
+ruff==0.17.6
+bandit==1.9.4
+pip-audit==2.10.1
+pytest==9.2.0
+httpx==0.28.1
