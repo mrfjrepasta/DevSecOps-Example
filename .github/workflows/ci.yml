@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.14"
       - name: Install pinned, hashed dependencies
-        run: pip install --require-hashes -r api/requirements.txt -r requirements-dev.txt
+        run: pip install --require-hashes -r api/requirements.txt -r api/requirements-dev.txt
       - name: Lint
         run: ruff check api
       - name: SAST
